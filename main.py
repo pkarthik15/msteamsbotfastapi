@@ -16,8 +16,9 @@ client = OpenAI()
 
 APP_ID = os.environ.get("APP_ID", "")
 APP_PASSWORD = os.environ.get("APP_PASSWORD", "")
+TENANT_ID = os.environ.get("TENANT_ID", "")
 
-adapter_settings = BotFrameworkAdapterSettings(app_id=APP_ID, app_password=APP_PASSWORD)
+adapter_settings = BotFrameworkAdapterSettings(app_id=APP_ID, app_password=APP_PASSWORD, channel_auth_tenant=TENANT_ID)
 adapter = BotFrameworkAdapter(adapter_settings)
 
 
